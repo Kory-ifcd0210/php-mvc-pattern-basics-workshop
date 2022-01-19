@@ -1,6 +1,6 @@
 <?php
 
-echo 'cargé bien  <br/>';
+echo 'cargé bien Controller Employee  <br/>';
 require_once MODELS . "employeeModel.php";
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION

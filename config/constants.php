@@ -12,6 +12,9 @@ define("MODELS", BASE_PATH . '/models/');
 //RESOURCES
 define("RESOURCES", BASE_PATH . '/resources/');
 
+//ASSETS
+define("ASSETS", BASE_PATH . '/assets/');
+
 //Global Variable
 define("dbHost", "localhost");
 define("dbName", "mvc_basics");

@@ -8,6 +8,7 @@ function connectionDB(){
         return $pdo;
 
     }catch (PDOException $e){
+        $errorMs = $e;
         require_once (VIEWS. "/error/error.php");
     }
 };

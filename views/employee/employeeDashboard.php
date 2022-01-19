@@ -15,25 +15,33 @@
         <table class="table table-success table-striped">
             <thead>
             <tr>
-            <th scope="col">Name</th>
-            <th scope="col">LastName</th>
-            <th scope="col">Email</th>
-            <th scope="col">Avatar</th>
+                <th class="tg-0pky">Name</th>
+                <th class="tg-0lax">Email</th>
+                <th class="tg-0lax">Gender</th>
+                <th class="tg-0lax">City</th>
+                <th class="tg-0lax">Age</th>
+                <th class="tg-0lax">Phone Number</th>
+                <th class="tg-0lax"><a class="btn btn-secondary" href="?controller=employee&action=addEmployee">Add</a></th>
             </tr>
-            </thead>
+        </thead>
+        <tbody>
             <?php
             foreach ($getAllEmployeesModel as $row) {
-                echo '
-                <tbody>
-                <tr>
-                <th scope="row">'.$row['name'].'</th>
-                <td>'.$row['last_name'].'</td>
-                <td>'.$row['email'].'</td>
-                <td>'.$row['avatar'].'</td>
-                </tr>
-                </tbody>';
+                echo "<tr>";
+                echo "<td class='tg-0lax'>" . $row["name"] . "</td>";
+                echo "<td class='tg-0lax'>" . $row["email"] . "</td>";
+                echo "<td class='tg-0lax'>" . $row["gender"] . "</td>";
+                echo "<td class='tg-0lax'>" . $row["city"] . "</td>";
+                echo "<td class='tg-0lax'>" . $row["age"] . "</td>";
+                echo "<td class='tg-0lax'>" . $row["phone_number"] . "</td>";
+                echo "<td colspan='2' class='tg-0lax'>
+                <a class='btn btn-secondary' href='?controller=employee&action=getEmployee&id=" . $row["id"] . "'>Edit</a>
+                <a class='btn btn-danger' href='?controller=employee&action=deleteEmployee&id=" . $row["id"] . "'>Delete</a>
+                </td>";
+                echo "</tr>";
             }
             ?>
+            </tbody>';
         </table>
     </section>
 </body>
