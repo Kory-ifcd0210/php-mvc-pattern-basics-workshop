@@ -21,7 +21,6 @@ if (isset ($_GET["controller"]) && $_GET["controller"]!=null){
 }
 else
 {
-    $data = "holis";
     require_once VIEWS . "main/main.php";
 }
 

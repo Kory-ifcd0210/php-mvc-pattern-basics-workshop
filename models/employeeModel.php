@@ -39,11 +39,14 @@ return executeQuery($sql);
 }
 
 function updateEmployee($id){
-
+    $sql="UPDATE employees SET name = 'Editado' WHERE employees.id =". $id.";";
+    return executeQuery($sql);
 }
 
 function addEmployee(){
-    $sql= "INSERT INTO employees(id, name, last_name, email, gender_id, avatar, age, phone_number, city, street_address, state, postal_code) VALUES ('','otro','Prueba','otro@testing.com','3','','5','123456789','testing','Testing','TP','1234');";
+    $sql= "INSERT INTO employees(id, name, last_name, email, gender_id, avatar, age, phone_number, city, street_address, state, postal_code) VALUES ('','Nuevo','Otro','nuevo@otro.com','3','','25','123458755','Prueba','NW','223','1225');";
+
+
     executeQuery($sql);
 
 }

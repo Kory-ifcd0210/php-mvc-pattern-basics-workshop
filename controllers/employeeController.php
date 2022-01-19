@@ -1,6 +1,5 @@
 <?php
 
-echo 'cargé bien Controller Employee  <br/>';
 require_once MODELS . "employeeModel.php";
 
 //OBTAIN THE ACCION PASSED IN THE URL AND EXECUTE IT AS A FUNCTION
@@ -12,8 +11,6 @@ $action= "";
 if(isset($_REQUEST["action"])){
     $action= $_REQUEST["action"];
 }
-
-
 
 if(function_exists($action)){
     if(isset($_GET["id"])){
@@ -57,6 +54,21 @@ function deleteController($id){
 
     $ok= deleteEmployee($id);
     if(empty($ok)){
+        //$getAllEmployeesModel = get();
+        require_once VIEWS . "/employee/employeeDashboard.php";
+    }else{
+        error($ok);
+    }
+}
+
+function showEmployee(){
+    require_once VIEWS . "/employee/employee.php";
+
+}
+
+function addController(){
+    $ok= addEmployee();
+    if(empty($ok)){
         $getAllEmployeesModel = get();
         require_once VIEWS . "/employee/employeeDashboard.php";
     }else{
@@ -64,11 +76,11 @@ function deleteController($id){
     }
 }
 
-function addController(){
-    $ok= addEmployee();
+function editController($id){
+    $ok= updateEmployee($id);
     if(empty($ok)){
         $getAllEmployeesModel = get();
-        require_once VIEWS . "/employee/employee.php";
+        require_once VIEWS . "/employee/employeeDashboard.php";
     }else{
         error($ok);
     }
