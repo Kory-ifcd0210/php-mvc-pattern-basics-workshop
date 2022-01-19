@@ -14,7 +14,7 @@ if(isset($_REQUEST["action"])){
 }
 
 if(function_exists($action)){
-   $action();
+    $action();
 }else{
     error('La accion no existe');
 }

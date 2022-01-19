@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>hola, estas en main</h1>
-    <?php echo $data; ?>
+    <a href="?controller=employee&action=getAllEmployees">Dashboard</a>
+    <a href="?controller=travel">Travel</a>
 </body>
 </html>
