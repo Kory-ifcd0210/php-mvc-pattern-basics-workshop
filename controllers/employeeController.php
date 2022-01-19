@@ -13,8 +13,15 @@ if(isset($_REQUEST["action"])){
     $action= $_REQUEST["action"];
 }
 
+
+
 if(function_exists($action)){
-    $action();
+    if(isset($_GET["id"])){
+        $id=$_GET["id"];
+        $action($id);
+    }else{
+        $action();
+    }
 }else{
     error('La accion no existe');
 }
@@ -46,6 +53,27 @@ function dashboard()
     }
 }
 
+function deleteController($id){
+
+    $ok= deleteEmployee($id);
+    if(empty($ok)){
+        $getAllEmployeesModel = get();
+        require_once VIEWS . "/employee/employeeDashboard.php";
+    }else{
+        error($ok);
+    }
+}
+
+function addController(){
+    $ok= addEmployee();
+    if(empty($ok)){
+        $getAllEmployeesModel = get();
+        require_once VIEWS . "/employee/employee.php";
+    }else{
+        error($ok);
+    }
+}
+
 /**
  * This function calls the corresponding model function and includes the corresponding view
  */
@@ -53,6 +81,8 @@ function getEmployee($request)
 {
     //
 }
+
+
 
 /**
  * This function includes the error view with a message

@@ -1,15 +1,14 @@
 <?php
 require_once MODELS . "/helper/dbConnection.php";
 
-function executeQuery($query){
+function executeQuery($sql){
     $dbObject = connectionDB();
-    $query= $dbObject->prepare($query);
+    $query= $dbObject->prepare($sql);
     try{
         $query->execute();
         return $query->fetchAll();
     }catch(Exception $e){
-        echo $e;
-        return null;
+        return $e;
     }
 }
 
@@ -35,7 +34,8 @@ function getById($id){
 }
 
 function deleteEmployee($id){
-
+$sql= "DELETE FROM employees WHERE employees.id =" . $id. ";";
+return executeQuery($sql);
 }
 
 function updateEmployee($id){
@@ -43,7 +43,7 @@ function updateEmployee($id){
 }
 
 function addEmployee(){
-    $sql= "INSERT INTO employees(id, name, last_name, email, gender_id, avatar, age, phone_number, city, street_address, state, postal_code) VALUES ('','test','Prueba','prueba@testing.com','3','','5','123456789','testing','Testing','TP','1234');";
+    $sql= "INSERT INTO employees(id, name, last_name, email, gender_id, avatar, age, phone_number, city, street_address, state, postal_code) VALUES ('','otro','Prueba','otro@testing.com','3','','5','123456789','testing','Testing','TP','1234');";
     executeQuery($sql);
 
 }

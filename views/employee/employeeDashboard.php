@@ -21,7 +21,7 @@
                 <th class="tg-0lax">City</th>
                 <th class="tg-0lax">Age</th>
                 <th class="tg-0lax">Phone Number</th>
-                <th class="tg-0lax"><a class="btn btn-secondary" href="?controller=employee&action=addEmployee">Add</a></th>
+                <th class="tg-0lax"><a class="btn btn-secondary" href="?controller=employee&action=addController">Add</a></th>
             </tr>
         </thead>
         <tbody>
@@ -36,7 +36,7 @@
                 echo "<td class='tg-0lax'>" . $row["phone_number"] . "</td>";
                 echo "<td colspan='2' class='tg-0lax'>
                 <a class='btn btn-secondary' href='?controller=employee&action=getEmployee&id=" . $row["id"] . "'>Edit</a>
-                <a class='btn btn-danger' href='?controller=employee&action=deleteEmployee&id=" . $row["id"] . "'>Delete</a>
+                <a class='btn btn-danger' href='?controller=employee&action=deleteController&id=" . $row["id"] . "'>Delete</a>
                 </td>";
                 echo "</tr>";
             }
