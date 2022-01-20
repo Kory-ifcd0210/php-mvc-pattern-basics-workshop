@@ -44,8 +44,19 @@ function updateEmployee($id){
 }
 
 function addEmployee(){
-    $sql= "INSERT INTO employees(id, name, last_name, email, gender_id, avatar, age, phone_number, city, street_address, state, postal_code) VALUES ('','Nuevo','Otro','nuevo@otro.com','3','','25','123458755','Prueba','NW','223','1225');";
-
+    $name= $_POST['name'];
+    $lastName= $_POST['lastName'];
+    $email= $_POST['email'];
+    $gender= $_POST['gender'];
+    $avatar= $_POST['lastName'];
+    $age= $_POST['age'];
+    $phoneNomber= $_POST['phoneNumber'];
+    $city= $_POST['city'];
+    $streetAddress= $_POST['streetAddress'];
+    $state= $_POST['state'];
+    $postalCode= $_POST['postalCode'];
+    $sql= "INSERT INTO employees(name, last_name, email, gender_id, avatar, age, phone_number, city, street_address, state, postal_code) VALUES ('
+    ', '$lastName', 'nuevo@otro.com', '3', '', '25' ,'123458755', 'Prueba', 'NW', '223', '1225');";
 
     executeQuery($sql);
 

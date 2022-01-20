@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col ">
                     <label for="inputName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" required value="<?php  $getAllEmployeesModel['name'] ?>">
+                    <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" required>
                     <label for="inputEmail1" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
                     <label for="inputCity" class="form-label" >City</label>
@@ -34,8 +34,9 @@
                     <label for="inputGender" class="form-label">Gender</label>
                     <select class="form-control" id="inputGender" name="gender">
                     <option value="" disabled selected hidden>Choose a gender</option>
-                        <option value="man">Man</option>
-                        <option value="woman">Woman</option>
+                        <option value="1">Man</option>
+                        <option value="2">Woman</option>
+                        <option value="3">Other</option>
                     </select>
                     <label for="inputStreetAddress" class="form-label">Street Address</label>
                     <input type="text" class="form-control" id="inputStreetAddress" name="streetAddress" placeholder="Street Adress">
@@ -43,6 +44,10 @@
                     <input type="number" class="form-control" id="inputAge" name="age" placeholder="Age" require>
                     <label for="inputPhoneNumber" class="form-label">PhoneNumber</label>
                     <input type="tel" class="form-control" id="inputPhoneNumber" name="phoneNumber" placeholder="Phone number" required>
+                </div>
+                <div class=row>
+                <label for="inputAvatar" class="form-label">avatar</label>
+                    <input type="text" class="form-control" id="inputavatar" name="avatar" placeholder="Avatar Url" required>
                 </div>
             </div>
             <div class="row justify-content-center align-items-center sectionBtn">
