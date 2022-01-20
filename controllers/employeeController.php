@@ -54,19 +54,20 @@ function deleteController($id){
 
     $ok= deleteEmployee($id);
     if(empty($ok)){
-        //$getAllEmployeesModel = get();
+        $getAllEmployeesModel = get();
         require_once VIEWS . "/employee/employeeDashboard.php";
     }else{
         error($ok);
     }
 }
 
-function showEmployee(){
+function formEmployee(){
     require_once VIEWS . "/employee/employee.php";
 
 }
 
 function addController(){
+    echo 'addController';
     $ok= addEmployee();
     if(empty($ok)){
         $getAllEmployeesModel = get();

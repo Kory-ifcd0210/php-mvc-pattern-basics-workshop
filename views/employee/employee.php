@@ -10,17 +10,20 @@
     <script src="assets/js/utils.js" defer></script>
     <title>Employee</title>
 </head>
+
+
+
 <body>
 <section class="row justify-content-center">
         <!-- Employee form  -->
-        <form id="employeeForm" class="col-8 bg-light" action="?controller=employee&action=addController" method="POST">
+        <form id="employeeForm" class="col-8 bg-light" action="?controller=employee&action=addEmployee>" method="POST">
             <h2 id="nameTitle"> </h2>
             <div class="row">
                 <div class="col ">
                     <label for="inputName" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" required>
+                    <input type="text" class="form-control" id="inputName" name="name" placeholder="Name" >
                     <label for="inputEmail1" class="form-label">Email address</label>
-                    <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                    <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" >
                     <label for="inputCity" class="form-label" >City</label>
                     <input type="text" class="form-control" id="inputCity" name="city" placeholder="City">
                     <label for="inputState" class="form-label">State</label>
@@ -30,7 +33,7 @@
                 </div>
                 <div class="col">
                     <label for="inputLastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName" name="lastName" placeholder="Last name" required>
+                    <input type="text" class="form-control" id="inputLastName" name="lastName" placeholder="Last name" >
                     <label for="inputGender" class="form-label">Gender</label>
                     <select class="form-control" id="inputGender" name="gender">
                     <option value="" disabled selected hidden>Choose a gender</option>
@@ -41,13 +44,13 @@
                     <label for="inputStreetAddress" class="form-label">Street Address</label>
                     <input type="text" class="form-control" id="inputStreetAddress" name="streetAddress" placeholder="Street Adress">
                     <label for="inputAge" class="form-label">Age</label>
-                    <input type="number" class="form-control" id="inputAge" name="age" placeholder="Age" require>
+                    <input type="number" class="form-control" id="inputAge" name="age" placeholder="Age" >
                     <label for="inputPhoneNumber" class="form-label">PhoneNumber</label>
-                    <input type="tel" class="form-control" id="inputPhoneNumber" name="phoneNumber" placeholder="Phone number" required>
+                    <input type="tel" class="form-control" id="inputPhoneNumber" name="phoneNumber" placeholder="Phone number" >
                 </div>
                 <div class=row>
                 <label for="inputAvatar" class="form-label">avatar</label>
-                    <input type="text" class="form-control" id="inputavatar" name="avatar" placeholder="Avatar Url" required>
+                    <input type="text" class="form-control" id="inputavatar" name="avatar" placeholder="Avatar Url" >
                 </div>
             </div>
             <div class="row justify-content-center align-items-center sectionBtn">

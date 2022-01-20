@@ -1,7 +1,7 @@
 
-var form= document.getElementById('employeeForm');
+// var form= document.getElementById('employeeForm');
 
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-})
+// form.addEventListener('submit', function(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+// })
